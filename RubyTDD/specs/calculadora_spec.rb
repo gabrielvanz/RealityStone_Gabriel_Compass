@@ -88,4 +88,36 @@ describe('Calculadora') do
         expect(calculadora.multiplica(2.4,1.2)).to eq 2.88
     end
 
+
+    #Teste com o método de divisão
+    it('Deve dividir dois números inteiros positivos') do
+        calculadora = Calculadora.new
+        expect(calculadora.divide(10,5)).to eq 2
+    end
+
+    it('Deve dividir um número qualquer com 0') do
+        calculadora = Calculadora.new
+        expect(calculadora.divide(5,0)).to include 'Não é possível dividir um número por 0'
+    end
+
+    it('Deve dividir dois números inteiros negativos') do
+        calculadora = Calculadora.new
+        expect(calculadora.divide(-8,-4)).to eq 2
+    end
+
+    it('Deve dividir um número negativo com um número positivo') do
+        calculadora = Calculadora.new
+        expect(calculadora.divide(-10,2)).to eq -5
+    end
+
+    it('Deve dividir dois números inteiros, sendo o primeiro número menor que o segundo número') do
+        calculadora = Calculadora.new
+        expect(calculadora.divide(5,15)).to eq 0
+    end
+
+    it('Deve dividir dois números decimais') do
+        calculadora = Calculadora.new
+        expect(calculadora.divide(2.4,1.2)).to eq 2
+    end
+
 end

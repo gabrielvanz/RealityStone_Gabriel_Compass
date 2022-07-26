@@ -11,4 +11,10 @@ class Calculadora
         a*b
     end    
 
+    def divide (a,b)
+        if a == 0 or b == 0 
+            return 'Não é possível dividir um número por 0!'
+        end
+        a/b
+    end    
 end
