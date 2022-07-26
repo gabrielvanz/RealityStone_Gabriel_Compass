@@ -7,4 +7,8 @@ class Calculadora
         a-b
     end    
 
+    def multiplica (a,b)
+        a*b
+    end    
+
 end

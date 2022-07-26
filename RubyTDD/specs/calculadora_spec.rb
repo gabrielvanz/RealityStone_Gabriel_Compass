@@ -61,4 +61,31 @@ describe('Calculadora') do
         expect(calculadora.subtrai(5.8,1.5)).to eq 4.3
     end
 
+
+    #Teste com o método de multiplicação
+    it('Deve multiplicar dois números inteiros positivos') do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplica(8,5)).to eq 40
+    end
+
+    it('Deve multiplicar um número qualquer com 0') do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplica(38,0)).to eq 0
+    end
+
+    it('Deve multiplicar dois números inteiros negativos') do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplica(-2,-4)).to eq 8
+    end
+
+    it('Deve multiplicar um número negativo com um número positivo') do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplica(-7,3)).to eq -21
+    end
+
+    it('Deve multiplicar números decimais') do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplica(2.4,1.2)).to eq 2.88
+    end
+
 end
