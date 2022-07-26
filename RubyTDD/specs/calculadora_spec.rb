@@ -120,4 +120,25 @@ describe('Calculadora') do
         expect(calculadora.divide(2.4,1.2)).to eq 2
     end
 
+
+    #Teste com o método de potenciação
+    it('Deve calcular a potencia de um número inteiro positivo') do
+        calculadora = Calculadora.new
+        expect(calculadora.potencia(2,2)).to eq 4
+    end
+
+    it('Deve calcular a potencia de um número inteiro negativo') do
+        calculadora = Calculadora.new
+        expect(calculadora.potencia(-2,3)).to eq -8
+    end
+
+    it('Deve calcular a potencia, sendo ela 0, de um número inteiro negativo') do
+        calculadora = Calculadora.new
+        expect(calculadora.potencia(5,0)).to eq 1
+    end
+
+    it('Deve calcular a potencia do número 0') do
+        calculadora = Calculadora.new
+        expect(calculadora.potencia(0,5)).to eq 0
+    end
 end

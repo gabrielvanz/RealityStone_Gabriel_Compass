@@ -16,5 +16,10 @@ class Calculadora
             return 'Não é possível dividir um número por 0!'
         end
         a/b
+    end
+
+    def potencia (a,p)
+        a**p        
     end    
+    
 end
