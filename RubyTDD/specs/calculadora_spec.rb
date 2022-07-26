@@ -141,4 +141,22 @@ describe('Calculadora') do
         calculadora = Calculadora.new
         expect(calculadora.potencia(0,5)).to eq 0
     end
+
+    #Teste com o método de raiz
+    it('Deve calcular a raiz de um número inteiro positivo') do
+        calculadora = Calculadora.new
+        expect(calculadora.raiz(9)).to eq 3
+    end
+
+    it('Deve calcular a raiz de um número negativo') do
+        calculadora = Calculadora.new
+        expect(calculadora.raiz(-2)).to include 'Não é possivel calcular a raiz de um número negativo'
+    end
+
+    it('Deve calcular a raiz do número 0') do
+        calculadora = Calculadora.new
+        expect(calculadora.raiz(0)).to eq 0
+    end
+
+    
 end

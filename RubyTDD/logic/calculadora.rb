@@ -18,8 +18,14 @@ class Calculadora
         a/b
     end
 
-    def potencia (a,p)
-        a**p        
+    def potencia (a,n)
+        a**n        
     end    
-    
+
+    def raiz (a)
+        if a < 0
+            return 'Não é possivel calcular a raiz de um número negativo'
+        end
+        Math.sqrt(a)
+    end
 end
