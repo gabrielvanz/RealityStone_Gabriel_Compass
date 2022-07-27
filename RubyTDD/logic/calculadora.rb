@@ -28,4 +28,17 @@ class Calculadora
         end
         Math.sqrt(a)
     end
+
+    def cosseno (a)
+        Math.cos(a)
+    end
+    
+    def seno (a)
+        Math.sin(a)
+    end
+
+    def tangente (a)
+        Math.tan(a)
+    end
+
 end
