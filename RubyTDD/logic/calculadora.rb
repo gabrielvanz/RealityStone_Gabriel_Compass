@@ -24,11 +24,18 @@ class Calculadora
         a**n        
     end    
 
-    def raiz (a)
+    def raiz_quad (a)
         if a < 0
-            return 'Não é possivel calcular a raiz de um número negativo'
+            return 'Não é possivel calcular a raiz quadrada de um número negativo'
         end
         sqrt(a)
+    end
+    
+    def raiz_cub (a)
+        if a < 0
+            return 'Não é possivel calcular a raiz cúbica de um número negativo'
+        end
+        cbrt(a)
     end
 
     def cosseno (a)
@@ -59,5 +66,13 @@ class Calculadora
         log2(a)
         rescue Math::DomainError
             "Não é possível calcular o logaritmo de um número negativo!"
+    end
+
+    def gama(a)
+        if a == 0 
+            return "O valor é infinito"
+        end
+        gamma(a)
+
     end
 end

@@ -118,18 +118,34 @@ describe('Calculadora') do
         expect(calculadora.potencia(0,5)).to eq 0
     end
 
-    #Teste com o método de raiz
-    it('Deve calcular a raiz de um número inteiro positivo') do
-        expect(calculadora.raiz(9)).to eq 3
+    
+    #Teste com o método de raiz quadrada
+    it('Deve calcular a raiz quadrada de um número inteiro positivo') do
+        expect(calculadora.raiz_quad(9)).to eq 3
     end
 
-    it('Deve calcular a raiz de um número negativo') do
-        expect(calculadora.raiz(-2)).to include 'Não é possivel calcular a raiz de um número negativo'
+    it('Deve calcular a raiz quadrada de um número negativo') do
+        expect(calculadora.raiz_quad(-2)).to include 'Não é possivel calcular a raiz quadrada de um número negativo'
     end
 
-    it('Deve calcular a raiz do número 0') do
-        expect(calculadora.raiz(0)).to eq 0
+    it('Deve calcular a raiz quadrada do número 0') do
+        expect(calculadora.raiz_quad(0)).to eq 0
     end
+
+
+    #Teste com o método de raiz cúbica
+    it('Deve calcular a raiz cúbica de um número inteiro positivo') do
+        expect(calculadora.raiz_cub(8)).to eq 2
+    end
+
+    it('Deve calcular a raiz cúbica de um número negativo') do
+        expect(calculadora.raiz_cub(-10)).to include 'Não é possivel calcular a raiz cúbica de um número negativo'
+    end
+
+    it('Deve calcular a raiz cúbica do número 0') do
+        expect(calculadora.raiz_cub(0)).to eq 0
+    end
+
 
     #Teste com o método de cosseno
     it('Deve calcular o cosseno de um número positivo') do
@@ -144,6 +160,7 @@ describe('Calculadora') do
         expect(calculadora.cosseno(0)).to eq 1.0
     end
 
+
     #Teste com o método de seno
     it('Deve calcular o seno de um número positivo') do
         expect(calculadora.seno(45)).to eq  0.8509035245341184
@@ -156,6 +173,7 @@ describe('Calculadora') do
     it('Deve calcular o seno do número 0') do
         expect(calculadora.seno(0)).to eq 0.0
     end
+
 
     #Teste com o método de tangente
     it('Deve calcular a tangente de um número positivo') do
@@ -170,36 +188,46 @@ describe('Calculadora') do
         expect(calculadora.tangente(0)).to eq 0.0
     end
 
+
     #Teste com o método de logaritmo 
     it('Deve calcular o logaritmo de um número positivo') do
-        #binding.pry
         expect(calculadora.logaritmo(1)).to eq 0.0
     end
     
     it('Deve calcular o logaritmo de um número negativo') do
-        #binding.pry
         expect(calculadora.logaritmo(-1)).to eq "Não é possível calcular o logaritmo de um número negativo!"
     end
     
+
     #Teste com o método de logaritmo de base 10
     it('Deve calcular o logaritmo de base 10 de um número positivo') do
-        #binding.pry
         expect(calculadora.logaritmo10(2)).to eq 0.3010299956639812
     end
     
     it('Deve calcular o logaritmo de base 10 de um número negativo') do
-        #binding.pry
         expect(calculadora.logaritmo10(-2)).to eq "Não é possível calcular o logaritmo de um número negativo!"
     end
 
     #Teste com o método de logaritmo de base 2
     it('Deve calcular o logaritmo de base 2 de um número positivo') do
-        #binding.pry
         expect(calculadora.logaritmo2(2)).to eq 1.0
     end
     
     it('Deve calcular o logaritmo de base 2 de um número negativo') do
-        #binding.pry
         expect(calculadora.logaritmo2(-2)).to eq "Não é possível calcular o logaritmo de um número negativo!"
+    end
+    
+
+    #Teste com o método gama
+    it('Deve calcular a função gama de um número positivo') do
+        expect(calculadora.gama(4)).to eq 6.0
+    end
+    
+    it('Deve calcular a função gama de um número negativo') do
+        expect(calculadora.gama(-1.5)).to eq 2.3632718012073513
+    end
+
+    it('Deve calcular a função gama de um número 0') do
+        expect(calculadora.gama(0)).to eq "O valor é infinito"
     end
 end
