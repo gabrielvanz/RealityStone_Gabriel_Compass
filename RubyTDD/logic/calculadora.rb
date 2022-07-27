@@ -1,3 +1,5 @@
+include Math
+
 class Calculadora
     def soma (a,b)
         a+b
@@ -26,19 +28,36 @@ class Calculadora
         if a < 0
             return 'Não é possivel calcular a raiz de um número negativo'
         end
-        Math.sqrt(a)
+        sqrt(a)
     end
 
     def cosseno (a)
-        Math.cos(a)
+        cos(a)
     end
     
     def seno (a)
-        Math.sin(a)
+        sin(a)
     end
 
     def tangente (a)
-        Math.tan(a)
+        tan(a)
     end
 
+    def logaritmo(a)
+        log(a)
+        rescue Math::DomainError
+            "Não é possível calcular o logaritmo de um número negativo!"
+    end
+
+    def logaritmo10(a)
+        log10(a)
+        rescue Math::DomainError
+            "Não é possível calcular o logaritmo de um número negativo!"
+    end
+
+    def logaritmo2(a)
+        log2(a)
+        rescue Math::DomainError
+            "Não é possível calcular o logaritmo de um número negativo!"
+    end
 end

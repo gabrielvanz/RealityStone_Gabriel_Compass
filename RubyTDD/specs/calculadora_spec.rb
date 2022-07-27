@@ -170,4 +170,36 @@ describe('Calculadora') do
         expect(calculadora.tangente(0)).to eq 0.0
     end
 
+    #Teste com o método de logaritmo 
+    it('Deve calcular o logaritmo de um número positivo') do
+        #binding.pry
+        expect(calculadora.logaritmo(1)).to eq 0.0
+    end
+    
+    it('Deve calcular o logaritmo de um número negativo') do
+        #binding.pry
+        expect(calculadora.logaritmo(-1)).to eq "Não é possível calcular o logaritmo de um número negativo!"
+    end
+    
+    #Teste com o método de logaritmo de base 10
+    it('Deve calcular o logaritmo de base 10 de um número positivo') do
+        #binding.pry
+        expect(calculadora.logaritmo10(2)).to eq 0.3010299956639812
+    end
+    
+    it('Deve calcular o logaritmo de base 10 de um número negativo') do
+        #binding.pry
+        expect(calculadora.logaritmo10(-2)).to eq "Não é possível calcular o logaritmo de um número negativo!"
+    end
+
+    #Teste com o método de logaritmo de base 2
+    it('Deve calcular o logaritmo de base 2 de um número positivo') do
+        #binding.pry
+        expect(calculadora.logaritmo2(2)).to eq 1.0
+    end
+    
+    it('Deve calcular o logaritmo de base 2 de um número negativo') do
+        #binding.pry
+        expect(calculadora.logaritmo2(-2)).to eq "Não é possível calcular o logaritmo de um número negativo!"
+    end
 end
