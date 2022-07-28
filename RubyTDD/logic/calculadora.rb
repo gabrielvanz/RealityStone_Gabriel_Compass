@@ -68,11 +68,14 @@ class Calculadora
             "Não é possível calcular o logaritmo de um número negativo!"
     end
 
+    def hipotenusa(a,b)
+        return hypot(a,b).round(2)
+    end
+
     def gama(a)
         if a == 0 
             return "O valor é infinito"
         end
         gamma(a)
-
     end
 end

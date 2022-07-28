@@ -218,6 +218,20 @@ describe('Calculadora') do
     end
     
 
+    #Teste com o método hipotenusa
+    it('Deve calcular a hipotenusa de números positivo') do
+        expect(calculadora.hipotenusa(2,6)).to eq 6.32
+    end
+
+    it('Deve calcular a hipotenusa de números negativos') do
+        expect(calculadora.hipotenusa(-4,-8)).to eq 8.94
+    end
+
+    it('Deve calcular a hipotenusa de números negativos e positivos') do
+        expect(calculadora.hipotenusa(-5,2)).to eq 5.39
+    end
+
+
     #Teste com o método gama
     it('Deve calcular a função gama de um número positivo') do
         expect(calculadora.gama(4)).to eq 6.0
