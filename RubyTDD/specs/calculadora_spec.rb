@@ -7,49 +7,57 @@ describe('Calculadora') do
 
     #Teste com o método de soma
     it('Deve somar dois números inteiros positivos') do
-        expect(calculadora.soma(4,5)).to eq 9
+        expect(calculadora.soma(4, 5)).to eq 9
     end
 
     it('Deve somar um número qualquer com 0') do
-        expect(calculadora.soma(9,0)).to eq 9
+        expect(calculadora.soma(9, 0)).to eq 9
     end
 
     it('Deve somar dois números inteiros negativos') do
-        expect(calculadora.soma(-9,-10)).to eq -19
+        expect(calculadora.soma(-9, -10)).to eq -19
     end
 
     it('Deve somar um número negativo com um número positivo') do
-        expect(calculadora.soma(-2,20)).to eq 18
+        expect(calculadora.soma(-2, 20)).to eq 18
     end
 
     it('Deve somar números decimais') do
-        expect(calculadora.soma(5.5,11.1)).to eq 16.6
+        expect(calculadora.soma(5.5, 11.1)).to eq 16.6
+    end
+
+    it('Deve somar um número decimal com um número inteiro') do
+        expect(calculadora.soma(8.4, 2)).to eq 10.4
     end
 
 
     #Teste com o método de subtração
     it('Deve subtrair dois números inteiros positivos') do
-        expect(calculadora.subtrai(10,5)).to eq 5
+        expect(calculadora.subtrai(10, 5)).to eq 5
     end
 
     it('Deve subtrair um número qualquer com 0') do
-        expect(calculadora.subtrai(2,0)).to eq 2
+        expect(calculadora.subtrai(2, 0)).to eq 2
     end
 
     it('Deve subtrair dois números inteiros negativos') do
-        expect(calculadora.subtrai(-8,-6)).to eq -2
+        expect(calculadora.subtrai(-8, -6)).to eq -2
     end
 
     it('Deve subtrair um número negativo com um número positivo') do
-        expect(calculadora.subtrai(-10,4)).to eq -14
+        expect(calculadora.subtrai(-10, 4)).to eq -14
     end
 
     it('Deve subtrair números inteiros, sendo o primeiro número menor que o segundo') do
-        expect(calculadora.subtrai(4,16)).to eq -12
+        expect(calculadora.subtrai(4, 16)).to eq -12
     end
 
     it('Deve subtrair números decimais') do
-        expect(calculadora.subtrai(5.8,1.5)).to eq 4.3
+        expect(calculadora.subtrai(5.8, 1.5)).to eq 4.3
+    end
+    
+    it('Deve subtrair um número decimal com um número inteiro') do
+        expect(calculadora.subtrai(7,1.5)).to eq 5.5
     end
 
 
@@ -72,6 +80,10 @@ describe('Calculadora') do
 
     it('Deve multiplicar números decimais') do
         expect(calculadora.multiplica(2.4,1.2)).to eq 2.88
+    end
+
+    it('Deve multiplicar um número decimal com um número inteiro') do
+        expect(calculadora.multiplica(1.4,2)).to eq 2.8
     end
 
 
@@ -100,34 +112,46 @@ describe('Calculadora') do
         expect(calculadora.divide(2.4,1.2)).to eq 2
     end
 
+    it('Deve dividir um número decimal com um número inteiro') do
+        expect(calculadora.divide(5.4,6)).to eq 0.9
+    end
+
 
     #Teste com o método de potenciação
-    it('Deve calcular a potencia de um número inteiro positivo') do
+    it('Deve calcular a potência de um número inteiro positivo') do
         expect(calculadora.potencia(2,2)).to eq 4
     end
 
-    it('Deve calcular a potencia de um número inteiro negativo') do
+    it('Deve calcular a potência de um número inteiro negativo') do
         expect(calculadora.potencia(-2,3)).to eq -8
     end
 
-    it('Deve calcular a potencia, sendo ela 0, de um número inteiro negativo') do
+    it('Deve calcular a potência, sendo ela 0, de um número inteiro') do
         expect(calculadora.potencia(5,0)).to eq 1
     end
 
-    it('Deve calcular a potencia do número 0') do
+    it('Deve calcular a potência do número 0') do
         expect(calculadora.potencia(0,5)).to eq 0
     end
 
-    
+    it('Deve calcular a potência de um número decimal') do
+        expect(calculadora.potencia(1.2,2)).to eq 1.44
+    end
+
+
     #Teste com o método de raiz quadrada
     it('Deve calcular a raiz quadrada de um número inteiro positivo') do
         expect(calculadora.raiz_quad(9)).to eq 3
     end
 
     it('Deve calcular a raiz quadrada de um número negativo') do
-        expect(calculadora.raiz_quad(-2)).to include 'Não é possivel calcular a raiz quadrada de um número negativo'
+        expect(calculadora.raiz_quad(-2)).to eq 'Não é possivel calcular a raiz quadrada de um número negativo'
     end
 
+    it('Deve calcular a raiz quadrada de um número decimal positivo') do
+        expect(calculadora.raiz_quad(4.4)).to eq 2.0976176963403033
+    end
+    
     it('Deve calcular a raiz quadrada do número 0') do
         expect(calculadora.raiz_quad(0)).to eq 0
     end
@@ -139,7 +163,11 @@ describe('Calculadora') do
     end
 
     it('Deve calcular a raiz cúbica de um número negativo') do
-        expect(calculadora.raiz_cub(-10)).to include 'Não é possivel calcular a raiz cúbica de um número negativo'
+        expect(calculadora.raiz_cub(-10)).to eq 'Não é possivel calcular a raiz cúbica de um número negativo'
+    end
+    
+    it('Deve calcular a raiz cúbica de um número decimal positivo') do
+        expect(calculadora.raiz_cub(9.4)).to eq 2.11045429449015
     end
 
     it('Deve calcular a raiz cúbica do número 0') do
@@ -156,6 +184,10 @@ describe('Calculadora') do
         expect(calculadora.cosseno(-20)).to eq 0.40808206181339196
     end
 
+    it('Deve calcular o cosseno de um número decimal') do
+        expect(calculadora.cosseno(1.5)).to eq 0.0707372016677029
+    end
+
     it('Deve calcular o cosseno do número 0') do
         expect(calculadora.cosseno(0)).to eq 1.0
     end
@@ -168,6 +200,10 @@ describe('Calculadora') do
 
     it('Deve calcular o seno de um número negativo') do
         expect(calculadora.seno(-90)).to eq -0.8939966636005579
+    end
+
+    it('Deve calcular o seno de um número decimal') do
+        expect(calculadora.seno(5.5)).to eq -0.7055403255703919
     end
 
     it('Deve calcular o seno do número 0') do
@@ -184,6 +220,10 @@ describe('Calculadora') do
         expect(calculadora.tangente(-90)).to eq 1.995200412208242
     end
 
+    it('Deve calcular a tangente de um número decimal') do
+        expect(calculadora.tangente(4.9)).to eq -5.267493065826737
+    end
+
     it('Deve calcular a tangente do número 0') do
         expect(calculadora.tangente(0)).to eq 0.0
     end
@@ -197,6 +237,10 @@ describe('Calculadora') do
     it('Deve calcular o logaritmo de um número negativo') do
         expect(calculadora.logaritmo(-1)).to eq "Não é possível calcular o logaritmo de um número negativo!"
     end
+
+    it('Deve calcular o logaritmo de 0') do
+        expect(calculadora.logaritmo(0)).to eq "O valor é -Infinito"
+    end
     
 
     #Teste com o método de logaritmo de base 10
@@ -205,8 +249,13 @@ describe('Calculadora') do
     end
     
     it('Deve calcular o logaritmo de base 10 de um número negativo') do
-        expect(calculadora.logaritmo10(-2)).to eq "Não é possível calcular o logaritmo de um número negativo!"
+        expect(calculadora.logaritmo10(-2)).to eq "Não é possível calcular o logaritmo de base 10 de um número negativo!"
     end
+
+    it('Deve calcular o logaritmo de base 10 de 0') do
+        expect(calculadora.logaritmo10(0)).to eq "O valor é -Infinito"
+    end
+
 
     #Teste com o método de logaritmo de base 2
     it('Deve calcular o logaritmo de base 2 de um número positivo') do
@@ -214,7 +263,11 @@ describe('Calculadora') do
     end
     
     it('Deve calcular o logaritmo de base 2 de um número negativo') do
-        expect(calculadora.logaritmo2(-2)).to eq "Não é possível calcular o logaritmo de um número negativo!"
+        expect(calculadora.logaritmo2(-2)).to eq "Não é possível calcular o logaritmo de base 2 de um número negativo!"
+    end
+    
+    it('Deve calcular o logaritmo de base 2 de 0') do
+        expect(calculadora.logaritmo2(0)).to eq "O valor é -Infinito"
     end
     
 
@@ -231,6 +284,18 @@ describe('Calculadora') do
         expect(calculadora.hipotenusa(-5,2)).to eq 5.39
     end
 
+    it('Deve calcular a hipotenusa de números decimais') do
+        expect(calculadora.hipotenusa(4.9,2.1)).to eq 5.33
+    end
+
+    it('Deve calcular a hipotenusa com um número decimal e um número inteiro') do
+        expect(calculadora.hipotenusa(2.8,20)).to eq 20.2
+    end
+
+    it('Deve calcular a hipotenusa quando um número seja 0') do
+        expect(calculadora.hipotenusa(0,2)).to eq 2.0
+    end
+
 
     #Teste com o método gama
     it('Deve calcular a função gama de um número positivo') do
@@ -242,8 +307,9 @@ describe('Calculadora') do
     end
 
     it('Deve calcular a função gama de um número 0') do
-        expect(calculadora.gama(0)).to eq "O valor é infinito"
+        expect(calculadora.gama(0)).to eq "O valor é Infinito"
     end
+
 
     #Teste com o método porcentagem
     it('Deve calcular a porcentagem de um número positivo') do
@@ -252,5 +318,9 @@ describe('Calculadora') do
 
     it('Deve calcular a porcentagem de um número negativos') do
         expect(calculadora.porcentagem(-50,20)).to eq -10
+    end
+
+    it('Deve calcular a porcentagem de um números decimais') do
+        expect(calculadora.porcentagem(70.5,60)).to eq 42.3
     end
 end

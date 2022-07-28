@@ -1,85 +1,101 @@
 include Math
 
 class Calculadora
-    def soma (a,b)
-        a+b
+    #Método de Soma
+    def soma(valorA, valorB)
+        return valorA + valorB
     end
-        
-    def subtrai (a,b)
-        a-b
+
+    #Método de Subtração
+    def subtrai(valorA, valorB)
+        return valorA - valorB
     end    
 
-    def multiplica (a,b)
-        a*b
+    #Método de Multiplicação
+    def multiplica(valorA, valorB)
+        return valorA * valorB
     end    
 
-    def divide (a,b)
-        if a == 0 or b == 0 
+    #Método de Divisão
+    def divide(valorA, valorB)
+        if valorA == 0 or valorB == 0 
             return 'Não é possível dividir um número por 0!'
         end
-        a/b
+        return valorA / valorB
     end
 
-    def potencia (a,n)
-        a**n        
+    #Método de Potenciação
+    def potencia(valorA, valorExpoente)
+        return valorA ** valorExpoente        
     end    
 
-    def raiz_quad (a)
-        if a < 0
+    #Método de Radiciação quadrada
+    def raiz_quad(valorA)
+        if valorA < 0
             return 'Não é possivel calcular a raiz quadrada de um número negativo'
         end
-        sqrt(a)
+        return sqrt(valorA)
     end
     
-    def raiz_cub (a)
-        if a < 0
+    #Método de Radiciação cúbica
+    def raiz_cub(valorA)
+        if valorA < 0
             return 'Não é possivel calcular a raiz cúbica de um número negativo'
         end
-        cbrt(a)
+        return cbrt(valorA)
     end
 
-    def cosseno (a)
-        cos(a)
+    #Método do Cosseno
+    def cosseno(valorA)
+        return cos(valorA)
     end
     
-    def seno (a)
-        sin(a)
+    #Método do Seno
+    def seno(valorA)
+        return sin(valorA)
     end
 
-    def tangente (a)
-        tan(a)
+    #Método de Tangente
+    def tangente(valorA)
+        return tan(valorA)
     end
 
-    def logaritmo(a)
-        log(a)
-        rescue Math::DomainError
-            "Não é possível calcular o logaritmo de um número negativo!"
+    #Método de Logaritmo
+    def logaritmo(valorA)
+        return "Não é possível calcular o logaritmo de um número negativo!" if valorA < 0
+        return "O valor é -Infinito" if valorA == 0
+        return log(valorA)
     end
 
-    def logaritmo10(a)
-        log10(a)
-        rescue Math::DomainError
-            "Não é possível calcular o logaritmo de um número negativo!"
+    #Método de Logaritmo de base 10
+    def logaritmo10(valorA)
+        return "Não é possível calcular o logaritmo de base 10 de um número negativo!" if valorA < 0
+        return "O valor é -Infinito" if valorA == 0
+        return log10(valorA)
     end
 
-    def logaritmo2(a)
-        log2(a)
-        rescue Math::DomainError
-            "Não é possível calcular o logaritmo de um número negativo!"
+    #Método de Logaritmo de base 2
+    def logaritmo2(valorA)
+        return "Não é possível calcular o logaritmo de base 2 de um número negativo!" if valorA < 0
+        return "O valor é -Infinito" if valorA == 0
+        return log2(valorA) 
     end
 
-    def hipotenusa(a,b)
-        return hypot(a,b).round(2)
+    #Método de Hipotenusa
+    def hipotenusa(valorA, valorB)
+        return hypot(valorA, valorB).round(2)
     end
 
-    def gama(a)
-        if a == 0 
-            return "O valor é infinito"
+    #Método de Gama
+    def gama(valorA)
+        if valorA == 0 
+            return "O valor é Infinito"
         end
-        gamma(a)
+        return gamma(valorA)
     end
 
-    def porcentagem(a,p)
-        return a * p / 100
+    #Método de Porcentagem
+    def porcentagem(valorA,valorPorcentagem)
+        return valorA * valorPorcentagem / 100
     end
 end
