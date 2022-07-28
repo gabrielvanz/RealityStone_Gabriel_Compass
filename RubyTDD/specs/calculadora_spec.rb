@@ -219,7 +219,7 @@ describe('Calculadora') do
     
 
     #Teste com o método hipotenusa
-    it('Deve calcular a hipotenusa de números positivo') do
+    it('Deve calcular a hipotenusa de números positivos') do
         expect(calculadora.hipotenusa(2,6)).to eq 6.32
     end
 
@@ -243,5 +243,14 @@ describe('Calculadora') do
 
     it('Deve calcular a função gama de um número 0') do
         expect(calculadora.gama(0)).to eq "O valor é infinito"
+    end
+
+    #Teste com o método porcentagem
+    it('Deve calcular a porcentagem de um número positivo') do
+        expect(calculadora.porcentagem(100,50)).to eq 50
+    end
+
+    it('Deve calcular a porcentagem de um número negativos') do
+        expect(calculadora.porcentagem(-50,20)).to eq -10
     end
 end

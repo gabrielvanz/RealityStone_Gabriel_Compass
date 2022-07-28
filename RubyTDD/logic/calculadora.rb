@@ -78,4 +78,8 @@ class Calculadora
         end
         gamma(a)
     end
+
+    def porcentagem(a,p)
+        return a * p / 100
+    end
 end
