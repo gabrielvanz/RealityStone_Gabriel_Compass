@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">CHALLENGE DA SPRINT 4</h1>
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/gabrielvanz/RealityStone_Gabriel_Compass/blob/develop/LICENSE)
@@ -112,3 +113,6 @@ bundle exec rspec calculadora_spec.rb
 
 -E-mail - gabrivanz@hotmail.com
 
+=======
+# RealityStone_Gabriel_Compass
+>>>>>>> f4d4ed8bbf0f3523e8aff918f62ec0214a2f9c7c
