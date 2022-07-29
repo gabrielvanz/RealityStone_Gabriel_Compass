@@ -4,7 +4,7 @@
 
 <h2>Sobre o projeto</h2>
 
-> Este projeto é referente ao Programa de Bolsas RealityStone, Compasso UOL, cujo seu propósito é aplicar o conhecimento e técnicas para a realização de TDD (Desenvolvimento Orientado por Testes) e atividades propóstas.
+> Este projeto é referente a Sprint 4 do Programa de Bolsas Altomação de Testes front-end com Ruby, Compass, cujo seu propósito é aplicar o conhecimento e técnicas para a realização dos TDD's (Desenvolvimento Orientado por Testes) e atividades propóstas.
 
 Está contido neste projeto, os exercícios de fixação utilizando Ruby Koans, sendo estes os desafios realizados abaixo
 
@@ -71,11 +71,11 @@ $ git clone https://github.com/gabrielvanz/RealityStone_Gabriel_Compass.git
 
 <h2>Instalação das dependências</h2>
 
-1- Abra a pasta em que foi clonado o repositorio
+1- Abra a pasta em que foi clonado o repositório
 
 2- Abra a pasta RubyTDD e execute o prompt de comando
 
-3- Digite o comandos para instalar as dependências
+3- Digite o comando para instalar as dependências
 
 ```bash
 bundle install
@@ -87,7 +87,7 @@ bundle install
 
 1- Abra o prompt de comando na pasta **koans**
 
-2- Copie e substitua **nome** pelo nome do arquivo em que deseja abrir
+2- Copie e substitua ```nome``` pelo nome do arquivo em que deseja abrir
 
 ```bash
 ruby about_"nome".rb
@@ -95,7 +95,7 @@ ruby about_"nome".rb
 
 <h2>Para abrir o arquivo dos TDD's da Calculadora </h2>
 
-1- Abra o prompt de comando na pasta **RubyTDD/rspecs**
+1- Abra o prompt de comando na pasta **RubyTDD/specs**
 
 2- Execute o seguinte comando
 
@@ -107,10 +107,10 @@ bundle exec rspec calculadora_spec.rb
 
 <p>Gabriel Vanz</p>
 
-```
-GitHub - https://github.com/gabrielvanz
 
-LinkedIn - https://www.linkedin.com/in/gabrielvanz/
+-GitHub - https://github.com/gabrielvanz
 
-E-mail - gabrivanz@hotmail.com
-```
+-LinkedIn - https://www.linkedin.com/in/gabrielvanz/
+
+-E-mail - gabrivanz@hotmail.com
+
