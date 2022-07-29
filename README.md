@@ -112,7 +112,3 @@ bundle exec rspec calculadora_spec.rb
 -LinkedIn - https://www.linkedin.com/in/gabrielvanz/
 
 -E-mail - gabrivanz@hotmail.com
-
-=======
-# RealityStone_Gabriel_Compass
->>>>>>> f4d4ed8bbf0f3523e8aff918f62ec0214a2f9c7c
