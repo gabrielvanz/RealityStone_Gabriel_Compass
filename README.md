@@ -73,14 +73,12 @@ $ git clone https://github.com/gabrielvanz/RealityStone_Gabriel_Compass.git
 
 1- Abra a pasta em que foi clonado o repositório
 
-2- Abra a pasta RubyTDD e execute o prompt de comando
-
-3- Digite o comando para instalar as dependências
+2- Digite o comando para instalar as dependências
 
 ```bash
 bundle install
 ```
-4- Pressione **Enter**
+3- Pressione **Enter**
 
 
 <h2>Para abrir os desafios do Ruby Koans</h2>
